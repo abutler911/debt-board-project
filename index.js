@@ -2,9 +2,9 @@ console.log("connected");
 
 let myChart = document.getElementById("my-chart").getContext("2d");
 
-Chart.defaults.elements = "Lato";
-Chart.defaults.global.defaultFontSize = 18;
-Chart.defaults.global.defaultFontColor = "#777";
+// Chart.defaults.elements = "Lato";
+// Chart.defaults.global.defaultFontSize = 18;
+// Chart.defaults.global.defaultFontColor = "#777";
 
 let debtChart = new Chart(myChart, {
   type: "bar", // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -13,8 +13,13 @@ let debtChart = new Chart(myChart, {
     datasets: [
       {
         label: "Total Debt Amount",
-        data: [515504],
-        backgroundColor: "rgba(251, 152, 203, 0.8)",
+        data: [515504, 500000, 489493, 434090],
+        backgroundColor: [
+          "rgba(251, 152, 203, 0.8)",
+          "rgba(200, 150, 200, 0.7)",
+          "rgba(180, 140, 190, 0.6)",
+          "rgba(170, 130, 180, 0.5)",
+        ],
         borderWidth: 1,
         borderColor: "#777",
         hoverBorderWidth: 3,
@@ -24,12 +29,14 @@ let debtChart = new Chart(myChart, {
   },
   options: {
     responsive: true,
+    maintainAspectRatio: true,
+
     plugins: {
       title: {
         display: true,
         text: "Butler Debt Board",
         font: {
-          size: 100,
+          size: 24,
           weight: 600,
         },
       },
