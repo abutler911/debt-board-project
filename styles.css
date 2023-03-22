@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+.individual-debts {
+    height: auto;
+}
+
+.card {
+    background-color: rgb(192, 230, 230) !important;
+    width: 18rem;
+    height: auto;
+}
+
+.card-img-top {
+    height: 50%;
+}
