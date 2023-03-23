@@ -2,206 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js "></script> -->
-    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Butler | Debt Board</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Debt Dashboard</title>
   </head>
   <body>
-    <section class="bg-light pt-5 pb-5 shadow-sm individual-debts">
+    <header class="pt-5 pb-5 shadow-sm">
       <div class="container">
-        <div class="row pt-5">
-          <div class="col-12">
-            <h1 class="text-uppercase mb-4 text-center">Butler Debt Board</h1>
-            <h2>Total All Debts: $518,893</h2>
-            <h2>Total All Debts without House: $122,150</h2>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/pennymac.jpeg"
-                class="card-img-top"
-                alt="pennymac mortgage lender logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">PennyMac Mortgage</h5>
-                <p class="card-text text-center mb-4">$396,742</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/ford.jpeg"
-                class="card-img-top"
-                alt="ford car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Ford Explorer</h5>
-                <p class="card-text text-center mb-4">$12,500</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/vw.jpeg"
-                class="card-img-top"
-                alt="vw car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">VW Jetta</h5>
-                <p class="card-text text-center mb-4">$3,007</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/capitalone.png"
-                class="card-img-top"
-                alt="pennymac mortgage lender logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">CapitalOne Card</h5>
-                <p class="card-text text-center mb-4">$10,200</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/cabelas.jpeg"
-                class="card-img-top"
-                alt="ford car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Cabelas</h5>
-                <p class="card-text text-center mb-4">$6,200</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/citibank.png"
-                class="card-img-top"
-                alt="vw car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Citibank</h5>
-                <p class="card-text text-center mb-4">$3,007</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/amex.jpeg"
-                class="card-img-top"
-                alt="pennymac mortgage lender logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">American Express</h5>
-                <p class="card-text text-center mb-4">$4,359</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/macu.jpeg"
-                class="card-img-top"
-                alt="ford car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">MACU Visa</h5>
-                <p class="card-text text-center mb-4">$1,443</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/macu.jpeg"
-                class="card-img-top"
-                alt="vw car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">MACU Student Loan</h5>
-                <p class="card-text text-center mb-4">$7,123</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/fedstudentloan.png"
-                class="card-img-top"
-                alt="pennymac mortgage lender logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Federal Student Loan</h5>
-                <p class="card-text text-center mb-4">$48,000</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/irslogo.jpeg"
-                class="card-img-top"
-                alt="ford car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Fed Tax Loan</h5>
-                <p class="card-text text-center mb-4">$23,000</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 mb-3 d-flex align-items-stretch">
-            <div class="card">
-              <img
-                src="./public/imgs/utahlogo.jpeg"
-                class="card-img-top"
-                alt="vw car logo"
-              />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center">Utah Tax Loan</h5>
-                <p class="card-text text-center mb-4">$3,000</p>
-              </div>
-            </div>
-          </div>
+        <h1 class="text-uppercase mb-4 text-center">Butler Debt Board</h1>
+        <h2 id="total-debts">Total All Debts: $518,893</h2>
+        <h2 id="total-debts-without-house">
+          Total All Debts without House: $122,150
+        </h2>
+      </div>
+    </header>
+    <section class="individual-debts">
+      <div class="container">
+        <div class="row" id="cards-container">
+          <!-- Debt cards will be added here -->
         </div>
       </div>
     </section>
-    <!-- <section class="debt-chart">
+    <section class="debt-chart">
       <div class="container">
-        <canvas id="my-chart"></canvas>
+        <canvas id="debtGraph"></canvas>
       </div>
-    </section> -->
-    <!-- <script src="index.js"></script> -->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

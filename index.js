@@ -1,45 +1,102 @@
-console.log("connected");
-
-let myChart = document.getElementById("my-chart").getContext("2d");
-
-// Chart.defaults.elements = "Lato";
-// Chart.defaults.global.defaultFontSize = 18;
-// Chart.defaults.global.defaultFontColor = "#777";
-
-let debtChart = new Chart(myChart, {
-  type: "bar", // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-  data: {
-    labels: ["3/21/23", "4/21/23", "5/21/23", "6/21/23"],
-    datasets: [
-      {
-        label: "Total Debt Amount",
-        data: [515504, 500000, 489493, 434090],
-        backgroundColor: [
-          "rgba(251, 152, 203, 0.8)",
-          "rgba(200, 150, 200, 0.7)",
-          "rgba(180, 140, 190, 0.6)",
-          "rgba(170, 130, 180, 0.5)",
-        ],
-        borderWidth: 1,
-        borderColor: "#777",
-        hoverBorderWidth: 3,
-        hoverBorderColor: "#000",
-      },
-    ],
+const debts = [
+  {
+    name: "PennyMac Mortgage",
+    amount: 396742,
+    image: "/public/imgs/pennymac.jpeg",
   },
-  options: {
-    responsive: true,
-    maintainAspectRatio: true,
+  { name: "Ford Explorer", amount: 12500, image: "/public/imgs/ford.jpeg" },
+  { name: "VW Jetta", amount: 3007, image: "/public/imgs/vw.jpeg" },
+  {
+    name: "CapitalOne Card",
+    amount: 10200,
+    image: "/public/imgs/capitalone.png",
+  },
+  { name: "Cabelas", amount: 6200, image: "/public/imgs/cabelas.jpeg" },
+  { name: "Citibank", amount: 3007, image: "/public/imgs/citibank.png" },
+  { name: "American Express", amount: 4359, image: "/public/imgs/amex.jpeg" },
+  { name: "MACU Visa", amount: 1443, image: "/public/imgs/macu.jpeg" },
+  { name: "MACU Student Loan", amount: 7123, image: "/public/imgs/macu.jpeg" },
+  {
+    name: "Federal Student Loan",
+    amount: 48000,
+    image: "/public/imgs/fedstudentloan.png",
+  },
+  { name: "Fed Tax Loan", amount: 23000, image: "/public/imgs/irslogo.jpeg" },
+  { name: "Utah Tax Loan", amount: 3000, image: "/public/imgs/utahlogo.jpeg" },
+];
 
-    plugins: {
-      title: {
-        display: true,
-        text: "Butler Debt Board",
-        font: {
-          size: 24,
-          weight: 600,
-        },
+// Add cards to the container
+const cardsContainer = document.getElementById("cards-container");
+debts.forEach((debt) => {
+  const card = createCard(debt);
+  cardsContainer.appendChild(card);
+});
+
+const chartData = {
+  labels: debts.map((debt) => debt.name),
+  datasets: [
+    {
+      label: "Debt Amount",
+      data: debts.map((debt) => debt.amount),
+      backgroundColor: [
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(255, 206, 86, 0.2)",
+      ],
+      borderColor: [
+        "rgba(75, 192, 192, 1)",
+        "rgba(255, 99, 132, 1)",
+        "rgba(255, 206, 86, 1)",
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
+const ctx = document.getElementById("debtGraph").getContext("2d");
+new Chart(ctx, {
+  type: "bar",
+  data: chartData,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
       },
     },
   },
 });
+
+// Function to create a Bootstrap card with image
+function createCard(debt) {
+  const card = document.createElement("div");
+  card.className =
+    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
+
+  card.innerHTML = `
+    <div class="card">
+      <img src="${debt.image}" class="card-img-top" alt="${debt.name} logo" />
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title text-center">${debt.name}</h5>
+        <p class="card-text text-center mb-4">$${debt.amount.toLocaleString()}</p>
+      </div>
+    </div>
+  `;
+
+  return card;
+}
+
+// Calculate total debts
+const totalDebts = debts.reduce((acc, debt) => acc + debt.amount, 0);
+
+// Calculate total debts without house
+const totalDebtsWithoutHouse = debts
+  .filter((debt) => debt.name !== "PennyMac Mortgage")
+  .reduce((acc, debt) => acc + debt.amount, 0);
+
+// Update the h2 elements with the calculated values
+document.getElementById(
+  "total-debts"
+).innerText = `Total All Debts: $${totalDebts.toLocaleString()}`;
+document.getElementById(
+  "total-debts-without-house"
+).innerText = `Total All Debts without House: $${totalDebtsWithoutHouse.toLocaleString()}`;
