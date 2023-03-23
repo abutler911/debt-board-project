@@ -7,7 +7,7 @@ const debts = [
   {
     name: "Ford Explorer",
     amount: 12500,
-    image: "ford.jpeg",
+    image: "images/ford.jpeg",
   },
   {
     name: "VW Jetta",
