@@ -94,6 +94,8 @@ new Chart(ctx, {
   type: "bar",
   data: chartData,
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,
