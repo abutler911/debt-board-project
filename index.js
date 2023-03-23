@@ -2,62 +2,62 @@ const debts = [
   {
     name: "PennyMac Mortgage",
     amount: 396742,
-    image: "debt-board-project/public/imgs/pennymac.jpeg",
+    image: "pennymac.jpeg",
   },
   {
     name: "Ford Explorer",
     amount: 12500,
-    image: "debt-board-project/public/imgs/ford.jpeg",
+    image: "ford.jpeg",
   },
   {
     name: "VW Jetta",
     amount: 3007,
-    image: "debt-board-project/public/imgs/vw.jpeg",
+    image: "vw.jpeg",
   },
   {
     name: "CapitalOne Card",
     amount: 10200,
-    image: "debt-board-project/public/imgs/capitalone.png",
+    image: "capitalone.png",
   },
   {
     name: "Cabelas",
     amount: 6200,
-    image: "debt-board-project/public/imgs/cabelas.jpeg",
+    image: "cabelas.jpeg",
   },
   {
     name: "Citibank",
     amount: 3007,
-    image: "debt-board-project/public/imgs/citibank.png",
+    image: "citibank.png",
   },
   {
     name: "American Express",
     amount: 4359,
-    image: "debt-board-project/public/imgs/amex.jpeg",
+    image: "amex.jpeg",
   },
   {
     name: "MACU Visa",
     amount: 1443,
-    image: "debt-board-project/public/imgs/macu.jpeg",
+    image: "macu.jpeg",
   },
   {
     name: "MACU Student Loan",
     amount: 7123,
-    image: "debt-board-project/public/imgs/macu.jpeg",
+    image: "macu.jpeg",
   },
   {
     name: "Federal Student Loan",
     amount: 48000,
-    image: "debt-board-project/public/imgs/fedstudentloan.png",
+    image: "fedstudentloan.png",
   },
   {
     name: "Fed Tax Loan",
     amount: 23000,
-    image: "debt-board-project/public/imgs/irslogo.jpeg",
+    image: "irslogo.jpeg",
   },
   {
     name: "Utah Tax Loan",
     amount: 3000,
-    image: "debt-board-project/public/imgs/utahlogo.jpeg",
+    image: "utahlogo.jpeg",
   },
 ];
 
