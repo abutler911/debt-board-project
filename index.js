@@ -2,7 +2,7 @@ const debts = [
   {
     name: "PennyMac Mortgage",
     amount: 396742,
-    image: "pennymac.jpeg",
+    image: "images/pennymac.jpeg",
   },
   {
     name: "Ford Explorer",
@@ -12,52 +12,52 @@ const debts = [
   {
     name: "VW Jetta",
     amount: 3007,
-    image: "vw.jpeg",
+    image: "images/vw.jpeg",
   },
   {
     name: "CapitalOne Card",
     amount: 10200,
-    image: "capitalone.png",
+    image: "images/capitalone.png",
   },
   {
     name: "Cabelas",
     amount: 6200,
-    image: "cabelas.jpeg",
+    image: "images/cabelas.jpeg",
   },
   {
     name: "Citibank",
     amount: 3007,
-    image: "citibank.png",
+    image: "images/citibank.png",
   },
   {
     name: "American Express",
     amount: 4359,
-    image: "amex.jpeg",
+    image: "images/amex.jpeg",
   },
   {
     name: "MACU Visa",
     amount: 1443,
-    image: "macu.jpeg",
+    image: "images/macu.jpeg",
   },
   {
     name: "MACU Student Loan",
     amount: 7123,
-    image: "macu.jpeg",
+    image: "images/macu.jpeg",
   },
   {
     name: "Federal Student Loan",
     amount: 48000,
-    image: "fedstudentloan.png",
+    image: "images/fedstudentloan.png",
   },
   {
     name: "Fed Tax Loan",
     amount: 23000,
-    image: "irslogo.jpeg",
+    image: "images/irslogo.jpeg",
   },
   {
     name: "Utah Tax Loan",
     amount: 3000,
-    image: "utahlogo.jpeg",
+    image: "images/utahlogo.jpeg",
   },
 ];
 
