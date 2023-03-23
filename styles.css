@@ -16,9 +16,18 @@ header {
     margin-bottom: 20px;
 }
 
+header h1 {
+    color: black;
+    font-size: 300%;
+}
+
 .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
     transition: box-shadow 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease;
+    -ms-transition: box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -45,5 +54,10 @@ header {
 }
 
 .individual-debts .card-text {
-    font-size: 1rem;
+    font-size: 1.9rem;
+    font-weight: 900;
+}
+
+.debt-chart {
+    margin-top: 90px;
 }

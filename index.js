@@ -1,9 +1,9 @@
 const debts = [
-  {
-    name: "PennyMac Mortgage",
-    amount: 396742,
-    image: "images/pennymac.jpeg",
-  },
+  // {
+  //   name: "PennyMac Mortgage",
+  //   amount: 396742,
+  //   image: "images/pennymac.jpeg",
+  // },
   {
     name: "Ford Explorer",
     amount: 12500,
@@ -133,6 +133,6 @@ const totalDebtsWithoutHouse = debts
 document.getElementById(
   "total-debts"
 ).innerText = `Total All Debts: $${totalDebts.toLocaleString()}`;
-document.getElementById(
-  "total-debts-without-house"
-).innerText = `Total All Debts without House: $${totalDebtsWithoutHouse.toLocaleString()}`;
+// document.getElementById(
+//   "total-debts-without-house"
+// ).innerText = `Total All Debts without House: $${totalDebtsWithoutHouse.toLocaleString()}`;
