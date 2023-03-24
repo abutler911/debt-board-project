@@ -61,6 +61,8 @@ const debts = [
   },
 ];
 
+Chart.register(ChartDataLabels);
+
 // Add cards to the container
 const cardsContainer = document.getElementById("cards-container");
 debts.forEach((debt) => {
@@ -101,6 +103,17 @@ new Chart(ctx, {
         beginAtZero: true,
       },
     },
+    plugins: {
+      // Add the datalabels plugin configuration
+      datalabels: {
+        color: "#000",
+        anchor: "end",
+        align: "top",
+        formatter: function (value) {
+          return "$" + value.toLocaleString();
+        },
+      },
+    },
   },
 });
 
@@ -138,3 +151,65 @@ document.getElementById(
 // document.getElementById(
 //   "total-debts-without-house"
 // ).innerText = `Total All Debts without House: $${totalDebtsWithoutHouse.toLocaleString()}`;
+// const initialTotalDebt = debts.reduce((acc, debt) => acc + debt.amount, 0);
+
+const initialDebtData = [
+  { month: "March 2023", amount: 121000 },
+  { month: "April 2023", amount: 0 },
+  { month: "May 2023", amount: 0 },
+  { month: "June 2023", amount: 0 },
+  { month: "July 2023", amount: 0 },
+  { month: "August 2023", amount: 0 },
+  { month: "September 2023", amount: 0 },
+  { month: "October 2023", amount: 0 },
+  { month: "November 2023", amount: 0 },
+  { month: "December 2023", amount: 0 },
+
+  // Add more months as needed
+];
+
+const chartDataByMonth = {
+  labels: initialDebtData.map((debt) => debt.month),
+  datasets: [
+    {
+      label: "Debt Amount by Month",
+      data: initialDebtData.map((debt) => debt.amount),
+      backgroundColor: "rgba(255, 99, 132, 0.2)",
+      borderColor: "rgba(255, 99, 132, 1)",
+      borderWidth: 1,
+    },
+  ],
+};
+
+const ctxByMonth = document.getElementById("debtGraphByMonth").getContext("2d");
+const debtByMonthChart = new Chart(ctxByMonth, {
+  type: "line",
+  data: chartDataByMonth,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+    plugins: {
+      // Add the datalabels plugin configuration
+      datalabels: {
+        color: "#000",
+        anchor: "end",
+        align: "top",
+        formatter: function (value) {
+          return "$" + value.toLocaleString();
+        },
+      },
+    },
+  },
+});
+
+function updateDebtAmounts(newDebtAmounts) {
+  debtByMonthChart.data.datasets[0].data = newDebtAmounts;
+  debtByMonthChart.update();
+}
+
+updateDebtAmounts([121839]); // Replace these values with the updated debt amounts
