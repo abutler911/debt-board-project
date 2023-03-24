@@ -127,13 +127,16 @@ function createCard(debt) {
     <div class="card">
       <img src="${debt.image}" class="card-img-top" alt="${debt.name} logo" />
       <div class="card-body d-flex flex-column">
-        <h5 class="card-title text-center">${debt.name}</h5>
         <p class="card-text text-center mb-4">$${debt.amount.toLocaleString()}</p>
       </div>
     </div>
   `;
 
   return card;
+}
+
+{
+  /* <h5 class="card-title text-center">${debt.name}</h5> */
 }
 
 // Calculate total debts

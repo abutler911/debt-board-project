@@ -10,7 +10,7 @@ canvas {
 }
 
 header {
-    background-color: #4b6584;
+    background-color: rgba(75, 101, 132, 0.7);
     color: white;
     font-family: 'Playfair Display', sans-serif;
     margin-bottom: 20px;
@@ -61,7 +61,7 @@ header h1 {
 }
 
 .individual-debts .card-text {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 
