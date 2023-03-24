@@ -61,6 +61,19 @@ const debts = [
   },
 ];
 
+const initialDebtData = [
+  { month: "March 2023", amount: 121000 },
+  { month: "April 2023", amount: 0 },
+  { month: "May 2023", amount: 0 },
+  { month: "June 2023", amount: 0 },
+  { month: "July 2023", amount: 0 },
+  { month: "August 2023", amount: 0 },
+  { month: "September 2023", amount: 0 },
+  { month: "October 2023", amount: 0 },
+  { month: "November 2023", amount: 0 },
+  { month: "December 2023", amount: 0 },
+];
+
 Chart.register(ChartDataLabels);
 
 // Add cards to the container
@@ -104,7 +117,6 @@ new Chart(ctx, {
       },
     },
     plugins: {
-      // Add the datalabels plugin configuration
       datalabels: {
         color: "#000",
         anchor: "end",
@@ -114,7 +126,7 @@ new Chart(ctx, {
         },
       },
       legend: {
-        display: false, // Add this line to hide the chart legends
+        display: false,
       },
     },
   },
@@ -139,7 +151,6 @@ function createCard(debt) {
 }
 
 {
-  /* <h5 class="card-title text-center">${debt.name}</h5> */
 }
 
 // Calculate total debts
@@ -158,21 +169,6 @@ document.getElementById(
 //   "total-debts-without-house"
 // ).innerText = `Total All Debts without House: $${totalDebtsWithoutHouse.toLocaleString()}`;
 // const initialTotalDebt = debts.reduce((acc, debt) => acc + debt.amount, 0);
-
-const initialDebtData = [
-  { month: "March 2023", amount: 121000 },
-  { month: "April 2023", amount: 0 },
-  { month: "May 2023", amount: 0 },
-  { month: "June 2023", amount: 0 },
-  { month: "July 2023", amount: 0 },
-  { month: "August 2023", amount: 0 },
-  { month: "September 2023", amount: 0 },
-  { month: "October 2023", amount: 0 },
-  { month: "November 2023", amount: 0 },
-  { month: "December 2023", amount: 0 },
-
-  // Add more months as needed
-];
 
 const chartDataByMonth = {
   labels: initialDebtData.map((debt) => debt.month),
@@ -200,7 +196,6 @@ const debtByMonthChart = new Chart(ctxByMonth, {
       },
     },
     plugins: {
-      // Add the datalabels plugin configuration
       datalabels: {
         color: "#000",
         anchor: "end",
@@ -210,7 +205,7 @@ const debtByMonthChart = new Chart(ctxByMonth, {
         },
       },
       legend: {
-        display: false, // Add this line to hide the chart legends
+        display: false,
       },
     },
   },
@@ -221,4 +216,4 @@ function updateDebtAmounts(newDebtAmounts) {
   debtByMonthChart.update();
 }
 
-updateDebtAmounts([121839]); // Replace these values with the updated debt amounts
+updateDebtAmounts([121839]); // Replace these values with the updated debt amounts, first amount is for March 2023
