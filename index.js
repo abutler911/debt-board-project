@@ -113,6 +113,9 @@ new Chart(ctx, {
           return "$" + value.toLocaleString();
         },
       },
+      legend: {
+        display: false, // Add this line to hide the chart legends
+      },
     },
   },
 });
@@ -205,6 +208,9 @@ const debtByMonthChart = new Chart(ctxByMonth, {
         formatter: function (value) {
           return "$" + value.toLocaleString();
         },
+      },
+      legend: {
+        display: false, // Add this line to hide the chart legends
       },
     },
   },
