@@ -91,6 +91,11 @@ const investments = [
     image: "images/crypto.jpg",
   },
   { name: "Robinhood", amount: 1000, image: "images/robinhood.png" },
+  { name: "Crypto.com Wallet", amount: 7000, image: "images/crypto.jpg" },
+  { name: "Fundrise", amount: 600, image: "images/fundrise.png" },
+  { name: "Coinbase", amount: 1000, image: "images/coinbase.png" },
+  { name: "Utah My529", amount: 21000, image: "images/my529.png" },
+  { name: "Fidelity 401k", amount: 48000, image: "images/fidelity.png" },
 ];
 
 const initialInvestmentData = [
@@ -382,7 +387,7 @@ function updateInvestmentAmounts(newInvestmentAmounts) {
   investmentByMonthChart.update();
 }
 
-updateInvestmentAmounts([1000]); // Replace these values with the updated investment amounts, first amount is for March 2023
+updateInvestmentAmounts([109600]); // Replace these values with the updated investment amounts, first amount is for March 2023
 function updateDebtAmounts(newDebtAmounts) {
   debtByMonthChart.data.datasets[0].data = newDebtAmounts;
   debtByMonthChart.update();
