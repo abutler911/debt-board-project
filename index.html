@@ -27,7 +27,9 @@
   <body>
     <header class="pt-5 pb-5 shadow-sm">
       <div class="container">
-        <h1 class="text-uppercase mb-4 text-center">Butler Debt Board</h1>
+        <h1 class="text-uppercase mb-4 text-center">
+          Butler Debt/Investment Board
+        </h1>
         <h2 id="total-debts" class="text-center">Total All Debts: $518,893</h2>
         <!-- <h2 id="total-debts-without-house">
           Total All Debts without House: $122,150
@@ -58,7 +60,9 @@
 
     <!-- Investments Section -->
     <section class="individual-investments">
-      <h1 class="text-center">All Investments</h1>
+      <h2 class="text-center">Investments</h2>
+      <h3 id="total-investments" class="text-center"></h3>
+
       <div class="container">
         <div class="row" id="investment-cards-container">
           <!-- Investment cards will be added here -->
@@ -70,6 +74,13 @@
       <div class="container">
         <div class="chart-container" style="position: relative; width: 100%">
           <canvas id="investmentGraph"></canvas>
+        </div>
+      </div>
+    </section>
+    <section class="investment-chart">
+      <div class="container">
+        <div class="chart-container" style="position: relative; width: 100%">
+          <canvas id="investmentGraphByMonth"></canvas>
         </div>
       </div>
     </section>
