@@ -74,6 +74,25 @@ const initialDebtData = [
   { month: "December 2023", amount: 0 },
 ];
 
+const investments = [
+  {
+    name: "TD Ameritrade",
+    amount: 4000,
+    image: "images/tdameritrade.jpg",
+  },
+  {
+    name: "Skywest 401k",
+    amount: 23000,
+    image: "images/skywest.jpg",
+  },
+  {
+    name: "Crypto.com",
+    amount: 4000,
+    image: "images/crypto.jpg",
+  },
+  { name: "Robinhood", amount: 1000, image: "images/robinhood.png" },
+];
+
 Chart.register(ChartDataLabels);
 
 // Add cards to the container
@@ -81,6 +100,15 @@ const cardsContainer = document.getElementById("cards-container");
 debts.forEach((debt) => {
   const card = createCard(debt);
   cardsContainer.appendChild(card);
+});
+
+// Add investment cards to the container
+const investmentCardsContainer = document.getElementById(
+  "investment-cards-container"
+);
+investments.forEach((investment) => {
+  const card = createInvestmentCard(investment);
+  investmentCardsContainer.appendChild(card);
 });
 
 const chartData = {
@@ -150,6 +178,24 @@ function createCard(debt) {
   return card;
 }
 
+function createInvestmentCard(investment) {
+  const card = document.createElement("div");
+  card.className =
+    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
+
+  card.innerHTML = `
+    <div class="card">
+      <img src="${investment.image}" class="card-img-top" alt="${
+    investment.name
+  } logo" />
+      <div class="card-body d-flex flex-column">
+        <p class="card-text text-center mb-4">$${investment.amount.toLocaleString()}</p>
+      </div>
+    </div>
+  `;
+
+  return card;
+}
 {
 }
 

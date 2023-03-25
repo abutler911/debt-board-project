@@ -65,6 +65,26 @@ header h1 {
     font-weight: 900;
 }
 
+.individual-investments .card {
+    flex: 1;
+}
+
+.individual-investments .card-img-top {
+    max-height: 100px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: white;
+}
+
+.individual-investments .card-title {
+    font-size: 1.2rem;
+}
+
+.individual-investments .card-text {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
 .debt-chart {
     margin-top: 90px;
 }
