@@ -16,10 +16,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <script>
-      if (sessionStorage.getItem("authenticated") !== "true") {
-        location.href = "password.html";
+      const password = sessionStorage.getItem("password");
+
+      if (password !== "mypassword") {
+        window.location.href = "password.html";
       }
     </script>
 

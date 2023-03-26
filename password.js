@@ -1,16 +1,14 @@
-const passwordBtn = document.getElementById("password-btn");
-passwordBtn.addEventListener("click", () => {
-  checkPassword();
-});
+const form = document.querySelector("form");
 
-function checkPassword() {
-  const password = document.getElementById("password").value;
-  const correctPassword = "bethishot"; // Replace this with your desired password
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  if (password === correctPassword) {
-    sessionStorage.setItem("authenticated", "true");
-    location.href = "index.html"; // The main page of your website
+  const password = document.querySelector("#password").value;
+
+  if (password === "mypassword") {
+    sessionStorage.setItem("password", password);
+    window.location.href = "index.html";
   } else {
-    alert("Incorrect password. Please try again.");
+    alert("Incorrect password, please try again.");
   }
-}
+});
