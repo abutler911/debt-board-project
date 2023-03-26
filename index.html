@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
     <script>
       if (sessionStorage.getItem("authenticated") !== "true") {
         location.href = "password.html";
@@ -30,10 +31,7 @@
         <h1 class="text-uppercase mb-4 text-center">
           Butler Debt/Investment Board
         </h1>
-        <h2 id="total-debts" class="text-center">Total All Debts: $518,893</h2>
-        <!-- <h2 id="total-debts-without-house">
-          Total All Debts without House: $122,150
-        </h2> -->
+        <h2 id="total-debts" class="text-center"></h2>
       </div>
     </header>
     <section class="individual-debts">

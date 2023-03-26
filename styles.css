@@ -50,7 +50,9 @@ header h1 {
 }
 
 .individual-debts .card-img-top {
-    max-height: 100px;
+    /* max-height: 100px; */
+    height: 100px;
+    width: 100%;
     object-fit: contain;
     padding: 10px;
     background-color: white;
@@ -70,7 +72,9 @@ header h1 {
 }
 
 .individual-investments .card-img-top {
-    max-height: 100px;
+    /* max-height: 100px; */
+    height: 100px;
+    width: 100%;
     object-fit: contain;
     padding: 10px;
     background-color: white;

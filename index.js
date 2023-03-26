@@ -61,19 +61,6 @@ const debts = [
   },
 ];
 
-const initialDebtData = [
-  { month: "March 2023", amount: 121000 },
-  { month: "April 2023", amount: 0 },
-  { month: "May 2023", amount: 0 },
-  { month: "June 2023", amount: 0 },
-  { month: "July 2023", amount: 0 },
-  { month: "August 2023", amount: 0 },
-  { month: "September 2023", amount: 0 },
-  { month: "October 2023", amount: 0 },
-  { month: "November 2023", amount: 0 },
-  { month: "December 2023", amount: 0 },
-];
-
 const investments = [
   {
     name: "TD Ameritrade",
@@ -95,7 +82,20 @@ const investments = [
   { name: "Fundrise", amount: 600, image: "images/fundrise.png" },
   { name: "Coinbase", amount: 1000, image: "images/coinbase.png" },
   { name: "Utah My529", amount: 21000, image: "images/my529.png" },
-  { name: "Fidelity 401k", amount: 48000, image: "images/fidelity.png" },
+  { name: "Fidelity 401k", amount: 45770, image: "images/fidelity.png" },
+];
+
+const initialDebtData = [
+  { month: "March 2023", amount: 121000 },
+  { month: "April 2023", amount: 0 },
+  { month: "May 2023", amount: 0 },
+  { month: "June 2023", amount: 0 },
+  { month: "July 2023", amount: 0 },
+  { month: "August 2023", amount: 0 },
+  { month: "September 2023", amount: 0 },
+  { month: "October 2023", amount: 0 },
+  { month: "November 2023", amount: 0 },
+  { month: "December 2023", amount: 0 },
 ];
 
 const initialInvestmentData = [
@@ -128,7 +128,6 @@ investments.forEach((investment) => {
   const card = createInvestmentCard(investment);
   investmentCardsContainer.appendChild(card);
 });
-
 const chartData = {
   labels: debts.map((debt) => debt.name),
   datasets: [
@@ -177,45 +176,6 @@ new Chart(ctx, {
     },
   },
 });
-
-// Function to create a Bootstrap card with image
-function createCard(debt) {
-  const card = document.createElement("div");
-  card.className =
-    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
-
-  card.innerHTML = `
-    <div class="card">
-      <img src="${debt.image}" class="card-img-top" alt="${debt.name} logo" />
-      <div class="card-body d-flex flex-column">
-        <p class="card-text text-center mb-4">$${debt.amount.toLocaleString()}</p>
-      </div>
-    </div>
-  `;
-
-  return card;
-}
-
-function createInvestmentCard(investment) {
-  const card = document.createElement("div");
-  card.className =
-    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
-
-  card.innerHTML = `
-    <div class="card">
-      <img src="${investment.image}" class="card-img-top" alt="${
-    investment.name
-  } logo" />
-      <div class="card-body d-flex flex-column">
-        <p class="card-text text-center mb-4">$${investment.amount.toLocaleString()}</p>
-      </div>
-    </div>
-  `;
-
-  return card;
-}
-{
-}
 
 // Calculate total debts
 const totalDebts = debts.reduce((acc, debt) => acc + debt.amount, 0);
@@ -370,6 +330,44 @@ const investmentByMonthChart = new Chart(investmentCtxByMonth, {
     },
   },
 });
+// Function to create a Bootstrap card with image for each debt
+function createCard(debt) {
+  const card = document.createElement("div");
+  card.className =
+    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
+
+  card.innerHTML = `
+      <div class="card">
+        <img src="${debt.image}" class="card-img-top" alt="${debt.name} logo" />
+        <div class="card-body d-flex flex-column">
+          <p class="card-text text-center mb-4">$${debt.amount.toLocaleString()}</p>
+        </div>
+      </div>
+    `;
+
+  return card;
+}
+
+// Function to create a Bootstrap card with image for each investment
+
+function createInvestmentCard(investment) {
+  const card = document.createElement("div");
+  card.className =
+    "col-lg-3 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch";
+
+  card.innerHTML = `
+      <div class="card">
+        <img src="${investment.image}" class="card-img-top" alt="${
+    investment.name
+  } logo" />
+        <div class="card-body d-flex flex-column">
+          <p class="card-text text-center mb-4">$${investment.amount.toLocaleString()}</p>
+        </div>
+      </div>
+    `;
+
+  return card;
+}
 
 // Calculate total investments
 const totalInvestments = investments.reduce(
