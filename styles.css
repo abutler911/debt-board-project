@@ -14,7 +14,7 @@ header {
     background-color: rgba(75, 101, 132, 0.7);
     color: white;
     font-family: 'Playfair Display', sans-serif;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 header h1 {
@@ -46,7 +46,12 @@ header h1 {
     margin-bottom: 1.5rem !important;
 }
 
+.individual-debts {
+    background-color: #d8d8d8;
+}
+
 .individual-debts .card {
+    margin-top: 10px;
     flex: 1;
 }
 
@@ -66,6 +71,11 @@ header h1 {
 .individual-debts .card-text {
     font-size: 2rem;
     font-weight: 900;
+}
+
+.individual-investments {
+    margin-top: 100px;
+    background-color: #d8d8d8;
 }
 
 .individual-investments .card {
@@ -88,6 +98,10 @@ header h1 {
 .individual-investments .card-text {
     font-size: 2rem;
     font-weight: 900;
+}
+
+.investment-chart {
+    margin-top: 50px;
 }
 
 .debt-chart {

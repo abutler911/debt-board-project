@@ -16,14 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      const password = sessionStorage.getItem("password");
-
-      if (password !== "mypassword") {
-        window.location.href = "password.html";
-      }
-    </script>
-
     <title>Debt Dashboard</title>
   </head>
   <body>
@@ -45,6 +37,7 @@
     <section class="debt-chart">
       <div class="container">
         <div class="chart-container" style="position: relative; width: 100%">
+          <h2 class="text-center">Individual Debt Amounts</h2>
           <canvas id="debtGraph"></canvas>
         </div>
       </div>
@@ -52,6 +45,7 @@
     <section class="debt-chart">
       <div class="container">
         <div class="chart-container" style="position: relative; width: 100%">
+          <h2 class="text-center">Total Debt Amount By Month</h2>
           <canvas id="debtGraphByMonth"></canvas>
         </div>
       </div>
@@ -72,6 +66,8 @@
     <section class="investment-chart">
       <div class="container">
         <div class="chart-container" style="position: relative; width: 100%">
+          <h2 class="text-center">Individual Savings Accounts</h2>
+
           <canvas id="investmentGraph"></canvas>
         </div>
       </div>
@@ -79,6 +75,8 @@
     <section class="investment-chart">
       <div class="container">
         <div class="chart-container" style="position: relative; width: 100%">
+          <h2 class="text-center">Total Savings Amount By Month</h2>
+
           <canvas id="investmentGraphByMonth"></canvas>
         </div>
       </div>
