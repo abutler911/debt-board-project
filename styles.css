@@ -17,6 +17,11 @@ header {
     /* margin-bottom: 20px; */
 }
 
+footer {
+    text-align: center;
+}
+
+
 header h1 {
     color: black;
     font-size: 200%;
